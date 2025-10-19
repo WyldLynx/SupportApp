@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WyldLynx Control Tower</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <span class="brand-name">WyldLynx</span>
+          <span class="brand-tag">Operational Control Tower</span>
+        </div>
+      </div>
+      <div class="global-filters" aria-label="Global filters">
+        <label>
+          Period
+          <select id="filter-period"></select>
+        </label>
+        <label>
+          Team
+          <select id="filter-team"></select>
+        </label>
+        <label>
+          Client
+          <select id="filter-client"></select>
+        </label>
+        <label>
+          Owner
+          <select id="filter-owner"></select>
+        </label>
+      </div>
+    </header>
+    <nav class="app-nav" aria-label="Primary">
+      <button class="nav-item" data-view="home">Home</button>
+      <button class="nav-item" data-view="workspace">My workspace</button>
+      <button class="nav-item" data-view="sales">Sales &amp; Marketing</button>
+      <button class="nav-item" data-view="delivery">Delivery</button>
+      <button class="nav-item" data-view="support">Support</button>
+      <button class="nav-item" data-view="finance">Finance</button>
+      <button class="nav-item" data-view="clients">Clients</button>
+    </nav>
+    <main id="view-root" tabindex="-1"></main>
+    <footer class="app-footer">
+      <span>Data refreshed</span>
+      <span id="last-refresh"></span>
+    </footer>
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>
